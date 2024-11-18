@@ -4,14 +4,14 @@ import hello.core.AppConfig;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.member.MemberService;
-import hello.core.member.MemberServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class OrderServiceTest {
 
-    MemberService memberService;
-    OrderService orderService;
+    @Autowired private MemberService memberService;
+    @Autowired private OrderService orderService;
 
     @BeforeEach
     public void beforeEach() {
