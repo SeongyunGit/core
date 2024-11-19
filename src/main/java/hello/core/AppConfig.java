@@ -20,7 +20,7 @@ public class AppConfig {
         return new MemberServiceImpl(memberRepository());
     }
 
-    @Bean
+    @Bean(name = "memoryMemberRepository")
     public MemoryMemberRepository memberRepository() {
         System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
